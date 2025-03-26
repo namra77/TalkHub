@@ -1,0 +1,400 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor:#e7e750;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #FF8585;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  --jetblack: #121212;
+  --charcoal: #36454F;
+  --font-family: "Inter", sans-serif;
+  --mainheading: #36454F;
+  --sectionColor: #252525;
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+body {
+  max-width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==============================================================================================================*/
+
+/* =============================================== Base Styles ==================================================*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+section {
+  height: auto;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  max-width: 100%;
+  height: auto;
+}
+
+.list-item ul li {
+  font-family: var(--font-family);
+  font-size: 17px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 10px;
+}
+
+.list-item ul li span {
+  background-color: var(--secondarycolor);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.list-item ul li span i {
+  color: var(--primarycolor);
+  text-align: center;
+  padding: 5px;
+
+}
+
+.button-reservation-container {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+
+.button-reservation-container a {
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+}
+
+/* ==============================================================================================================*/
+
+
+/* =============================================================================================================*/
+
+/* Header CSS is kept in "header.css" */
+
+/* =============================================================================================================*/
+
+/* ==============================================================================================================*/
+
+/* Hero Section */
+
+.container .main-container .hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.container .main-container .hero-container .hero-image {
+  background: url('../images/bannercontact.jpg') no-repeat center/cover;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container .main-container .hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(36, 36, 36, 0.3);
+  z-index: 1;
+}
+
+.container .main-container .hero-container .hero-image .hero-heading {
+  color: var(--primarycolor);
+  font-size: 3.5em;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+/* ==============================================================================================================*/
+
+/* ==============================================================================================================*/
+
+/* contact section */
+
+.container .main-container .content-container .contact-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sectionColor);
+}
+
+.container .main-container .content-container .contact-content-container .contact-content-title h3 {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: bold;
+  color: #fdfd9e;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container .main-container .content-container .contact-content-container .contact-content-title>h2,
+.container .main-container .form-container .contact-form-text h2 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  color: #fdfd9e;
+  margin: 20px 0;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.container .main-container .content-container .contact-content-container .contact-content-text>p,
+.container .main-container .form-container .contact-form-text p,
+.container .main-container .content-container .contact-content-container .contact-info p,
+.container .main-container .content-container .contact-content-container .contact-info p a {
+  font-family: var(--font-family);
+  font-size: 17px;
+  color: var(--primarycolor);
+  line-height: 25px;
+  text-align: center;
+  max-width: 500px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.container .main-container .content-container .contact-content-container .contact-info p>span>i {
+  color: var(--secondarycolor);
+  margin-bottom: 10px;
+}
+
+/* ==============================================================================================================*/
+
+/* ==============================================================================================================*/
+
+/* Form Section */
+
+.container .main-container .form-container {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .form-container .contact-form-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .main-container .form-container .contact-form-image img {
+  width: 300px;
+  background-color: var(--primarycolor);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.container .main-container .form-container .contact-form-image img:hover {
+  background-color: var(--sectionColor);
+  transform: scaleY(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: var(--primarycolor);
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.container .main-container .form-container .contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--primarycolor);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.6s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.container .main-container .form-container .contact-form-container:hover {
+  background-color: var(--sectionColor);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.container .main-container .form-container .contact-form-container .form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .main-container .form-container .contact-form-container .form input[type="text"],
+.container .main-container .form-container .contact-form-container .form input[type="email"] {
+  width: 49%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: var(--font-family);
+  font-size: 17px;
+  margin: 10px 0;
+  background-color: #ec7777;
+}
+
+.container .main-container .form-container .contact-form-container .form textarea {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: var(--font-family);
+  font-size: 17px;
+  margin: 10px 5px;
+  background-color: #ec7777;
+}
+
+.container .main-container .form-container .contact-form-container .form input[type="text"],
+.container .main-container .form-container .contact-form-container .form input[type="email"],
+.container .main-container .form-container .contact-form-container .form textarea {
+  border: 2px solid var(--secondarycolor);
+  background-color: var(--primarycolor);
+}
+
+.container .main-container .form-container:hover .contact-form-container .form input::placeholder,
+.container .main-container .form-container:hover .contact-form-container .form textarea::placeholder {
+  color: var(--tertiarycolor);
+}
+
+.container .main-container .form-container .contact-form-container .form input::placeholder,
+.container .main-container .form-container .contact-form-container .form textarea::placeholder {
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  font-size: 17px;
+  font-family: var(--font-family);
+}
+
+.container .main-container .form-container .contact-form-container .form input:focus {
+  border-color: var(--tertiarycolor);
+  outline: none;
+}
+
+.container .main-container .form-container .contact-form-container .form .submit-button {
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.container .main-container .form-container .contact-form-container .form .submit-button input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--secondarycolor);
+  border: none;
+  border-radius: 5px;
+  color: var(--primarycolor);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container .main-container .form-container .contact-form-container .form .submit-button input[type="submit"]:hover {
+  background-color: var(--primarycolor); 
+  color: var(--secondarycolor);
+  transform: scale(1); 
+  font-weight: bold;
+}
+
+/* ==============================================================================================================*/
+
+/* ==============================================================================================================*/
+
+.container .main-container .map-container .contact-map-container iframe{
+  width: 100%;
+}
+
+/* ==============================================================================================================*/
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+  .container .main-container .form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+}
+
+/* =============================================================================================================*/
+
+/* Custom styles for SweetAlert */
+
+.custom-swal {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  position: relative;
+  z-index: 100;
+}
+
+.custom-swal .swal2-confirm {
+  background-color: var(--sectionColor);
+  color: var(--primarycolor);
+}
+
+
+/* Add more styles for other button types or elements as needed */
+
+.error {
+  color: red !important;
+}
+
+.error-border {
+  border: 2px solid red !important;
+}
+
+.success-border {
+  border: 4px solid green !important;
+}
+.banner-container{
+  background-color: var(--headercolor);
+}
+
+/* =============================================================================================================*/
+
+/* Footer CSS is kept in "Footer.css" */
+
+/* =============================================================================================================*/

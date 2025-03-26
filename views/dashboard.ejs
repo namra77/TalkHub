@@ -1,6 +1,6 @@
 <%- include('header.ejs') %>
 
-  <h2 class="mb-4">Hii, <%= user.name %>
+  <h2 class="mb-4 dash-name .text-shadow-drop-center .text-focus-in">Hii, <%= user.name %>
   </h2>
 
 
@@ -11,7 +11,7 @@
         <% if (users.length> 0) {
           for (let i = 0; i < users.length; i++) { %>
             <li class="list-group-item list-group-item-dark cursor-pointer user-list" data-id="<%= users[i]['_id'] %>">
-              <img src="<%= 'http://localhost:3000/' + users[i]['image'] %>" alt="" height="50px" width="50px">
+              <img src="<%= 'http://localhost:3000/' + users[i]['image'] %>" alt="" height="70px" width="70px">
               <%= users[i]['name'] %>
 
                 <% if (users[i]['is_online']==1) { %>
@@ -25,15 +25,16 @@
     </div>
 
     <div class="col-md-8">
-      <h3 class="start-head">Click to Start Chat</h3>
+      <h2 class="start-head text-shadow-drop-center text-focus-in dash-text">Your New Chat Buddy Is Waiting! Click And Start Chatting(/:)...</h2>
       <div class="chat-section">
+        <h4 id="chat-with" class="name-bar w-100">Chatting with: <span id="chat-user-name"></span></h4>
         <div id="chat-container" class="chat-container">
 
         </div>
 
         <form action="" id="chat-form">
           <input type="text" name="message" id="message" class="border" placeholder="Enter Message" required>
-          <input type="submit" value="Send Message" class="btn btn-primary">
+          <input type="submit" value="Send Message" class="my-btn">
         </form>
 
 

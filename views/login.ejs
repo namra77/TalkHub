@@ -15,6 +15,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,29 +30,46 @@
 
 
 
-<% if (typeof message !=='undefined' ) { %>
-  <h4 style="color:red;">
-    <%= message %>
-  </h4>
-  <% } %>
-    <section class="section d-flex  justify-content-center align-items-center">
-      <div class="box floating">
+<section class="section d-flex  justify-content-center align-items-center" id="content">
+  <div class="box floating">
 
-      </div>
+  </div>
 
-      <div class="form-container fade-in">
-        <form class="form align-items-center" action="" method="POST">
-          <h1>Welcome Back</h1>
-          <h2>Login</h2>
-          <input type="email" name="email" placeholder="Enter Email" required class="w-100">
-          <br><br>
+  <div class="form-container fade-in">
+    <form class="form align-items-center" id="login-form" action="" method="POST">
+      <h1>Welcome Back</h1>
+      <h2>Login</h2>
+      <input type="email" class="w-100" name="email" placeholder="Enter Email" required>
+      <br><br>
 
-          <input type="password" name="password" placeholder="Enter Password" required class="w-100">
-          <br><br>
+      <input type="password" id="password" class="w-100" name="password" placeholder="Enter Password" required>
+      <br><br>
+      <div id="error-message" style="color: red; display: none;"></div>
 
-          <input type="submit" class="btn btn-primary btn-form" value="Login">
+      <input type="submit" class="btn btn-primary btn-form" value="Login">
 
-        </form>
-      </div>
+    </form>
 
-    </section>
+    <% if (typeof message !== 'undefined' && message.length > 0) { %>
+      <div style="color: red;"><%= message %></div>
+    <% } %>
+
+        <h6 class="register">Not Registered?</h6>
+        <a href="./register">Register Now</a>
+  </div>
+
+</section>
+<script>
+
+  $("#login-form").validate({
+    submitHandler: function (form) {
+
+      form.submit()
+    }
+  })
+
+
+
+
+
+</script>

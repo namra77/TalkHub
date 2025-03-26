@@ -74,6 +74,20 @@ socket.on('getOfflineUser', function (data) {
 })
 
 
+
+//show name of distanant user at top of chat container
+document.addEventListener("DOMContentLoaded", function () {
+  const userList = document.querySelectorAll(".user-list"); 
+  const chatUserName = document.getElementById("chat-user-name"); 
+
+  userList.forEach(user => {
+    user.addEventListener("click", function () {
+      const selectedUserName = this.textContent.trim().split("\n")[0]; 
+      chatUserName.textContent = selectedUserName; 
+    });
+  });
+});
+
 //chat save of user
 $('#chat-form').on('submit', function (event) {
   event.preventDefault();
@@ -429,6 +443,22 @@ $('.join-now').on('click', function () {
 
 // ---------------------------------- Group chat section ----
 
+
+
+// show group name at top of chat section
+document.addEventListener("DOMContentLoaded", function () {
+  const groupList = document.querySelectorAll(".group-list");
+  const groupNameDisplay = document.getElementById("group-name"); 
+
+  groupList.forEach(group => {
+    group.addEventListener("click", function () {
+      const selectedGroupName = this.textContent.trim().split("\n")[0]; 
+      groupNameDisplay.textContent = selectedGroupName;
+    });
+  });
+});
+
+
 // scroll group chat
 function scrollGroupChat() {
   $('#group-chat-container').animate({
@@ -713,3 +743,5 @@ socket.on('groupChatMessageUpdated', function (data) {
   $('#' + data.id).find('span').text(data.message);
 
 });
+
+

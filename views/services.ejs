@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importing JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery UI (for DatePicker) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Importing Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+   
+    <!-- Importing Style Sheets -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../public/css/footer1.css">
+    <link rel="stylesheet" href="../css/footer1.css">
+
+    <!-- Importing Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Importing  Sweet Alerts CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- Importing  Sweet Alerts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Importing Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
+    <!-- Importing Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <!-- Importing Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- Importing Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Importing Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <!-- Importing Masonary -->
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <!-- <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script> -->
+
+    <!-- Website title will appear in browser window -->
+    <title>Services</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <header class="header-container">
+            <div class="nav-logo-container">
+              <a href="./dashboard.ejs">
+                <h1 class="nav-logo">TALK HUB</h1>
+              </a>
+            </div>
+            <nav class="nav-menu-container">
+              <ul>
+                <li><a href="dashboard" class="home_link">Home</a></li>
+                <li><a href="about" class="about_link">About</a></li>
+                <li><a href="services" class="service_link">OurServices</a></li>
+                <li><a href="contact" class="contact_link">Contact Us</a></li>
+              </ul>
+            </nav>
+            
+          </header>
+
+
+        <main class="main-container">
+
+            <section class="hero-container hero-section section-container-hero">
+                <div class="hero-image">
+                    <h1 class="hero-heading">OUR SERVICES</h1>
+                </div>
+            </section>
+
+            <section class="banner-container">
+                <div class="banner-content-container">
+                    <h2>GET READY TO DO <br> CHIT CHATS !!!</h2>
+                    <div class="banner-button-container">
+                        <a href="./contact-us.html">CHECK OUT OUR DEALS</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="deals-slider-container">
+                <h2 class="dslider-heading">OUR SPECIAL <span>DEALS</span></h2>
+                <article class="slider multiple-items-slider">
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg1.PNG" alt="Special Deal 1">
+                            <figcaption>Special Deal 1</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg2.PNG" alt="Special Deal 2">
+                            <figcaption>Special Deal 2</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg3.PNG" alt="Special Deal 3">
+                            <figcaption>Special Deal 3</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg4.PNG" alt="Special Deal 4">
+                            <figcaption>Special Deal 4</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg5.PNG" alt="Special Deal 5">
+                            <figcaption>Special Deal 5</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="../images/serviceImg6.PNG" alt="Special Deal 6">
+                            <figcaption>Special Deal 6</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+
+    
+            <section class="service-container">
+                <h2 class="service-heading">OUR <span>SERVICES</span></h2>
+                <article class="service-grid">
+                    <!-- Card 1 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg6.PNG" alt="SuperOff1">
+                            <div class="overlay">
+                                <h3>Super Offer1</h3>
+                                <p>Experience the art of change at its finest .</p>
+                                <p>Price: $25</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg5.PNG" alt="SuperOff2">
+                            <div class="overlay">
+                                <h3>Super Offer 2</h3>
+                                <p>Experience the  art of change at its finest.</p>
+                                <p>Price: $15</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg4.PNG" alt="SuperOff3">
+                            <div class="overlay">
+                                <h3>Super Offer 3</h3>
+                                <p>Experience the  art of change at its finest.</p>
+                                <p>Price: $20</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg3.PNG" alt="SuperOff4">
+                            <div class="overlay">
+                                <h3>Super Offer 4</h3>
+                                <p>Experience the  art of change at its finest..</p>
+                                <p>Price: $35</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg2.PNG" alt="Super Offer 5">
+                            <div class="overlay">
+                                <h3>Super Offer 5</h3>
+                                <p>Experience the  art of change at its finest.</p>
+                                <p>Price: $40</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="../images/serviceImg1.PNG" alt="SuperOff6">
+                            <div class="overlay">
+                                <h3>Super Offer 6</h3>
+                                <p>Experience the  art of change at its finest.</p>
+                                <p>Price: $30</p>
+                                <a href="./contact-us.html" class="book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+                </article>
+
+            </section>
+
+        </main>
+
+        
+        <footer class="footer-container">
+            <div class="footer-main">
+              <div class="footer-content-container">
+                <div class="footer-logo">
+                  <h2>TALK HUB</h2>
+                </div>
+                <div class="footer-text">
+                  <p>Experience a random chat alternative to find friends, connect with people, and chat with strangers from all over the world!.</p>
+                </div>
+      
+                <form action="your-submission-url" method="POST">
+                  <div class="footer-input-email">
+                    <input type="email" name="email" id="my-email" placeholder="Email Address">
+                  </div>
+                  <!-- <div class="footer-subscribe-button">
+                    <input type="submit" value="Subscribe">
+                  </div> -->
+                </form>
+      
+              </div>
+              <div class="footer-quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li>
+                    <span><i class="fa-solid fa-caret-right"></i></span>
+                    <a href="./dashboard">HomePage</a>
+                  </li>
+                  <li>
+                    <span><i class="fa-solid fa-caret-right"></i></span>
+                    <a href="./about" >About</a>
+                  </li>
+                  <li>
+                    <span><i class="fa-solid fa-caret-right"></i></span>
+                    <a href="./services" >Our Services</a>
+                  </li>
+                  <li>
+                    <span><i class="fa-solid fa-caret-right"></i></span>
+                    <a href="./contact" >Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-company-details">
+                <h3>Our Company</h3>
+                <p>Opens Everyday</p>
+                <p>08:00-21:00 WB</p>
+                <address class="contact-info">
+                  <p>
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    Karangploso District, Malang Regency, East Java
+                  </p>
+                  <p>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:potongin@gmail.com">talkhub@gmail.com</a>
+                  </p>
+                  <p>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+6285112345678">(+62) 851 1234 5678</a>
+                  </p>
+                </address>
+              </div>
+            </div>
+          </footer>
+            
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            // Multiple Items Slider
+            $('.multiple-items-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+
+            });
+
+        })
+
+    </script>
+
+
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- jQuery Validation Additional Methods -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+
+
+    <!-- Importing  Local Scripts Files -->
+    <script src="./scripts/services.js"></script>
+    <script src="./scripts/animation.js"></script>
+
+
+</body>
+
+</html>

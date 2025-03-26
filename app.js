@@ -3,9 +3,10 @@ const dotenv = require('dotenv').config();
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/real-time-chat-app')
+mongoose.connect(process.env.URI)
 .then(()=>console.log("Connected to Mongodb sucessfully"))
-.catch(()=>console.log("Error connected to Mongodb", err));
+.catch((err)=>console.log("Error connected to Mongodb",err));
+
 
 const app = require('express')();
 
@@ -13,7 +14,11 @@ const http = require('http').Server(app);
 
 const path = require("path");
 
-const videoController = require('./controllers/userController');
+const videoController = require('./controllers/videoController');
+const homeController = require('./controllers/homeController');
+const aboutController = require('./controllers/aboutController');
+const servicesController = require('./controllers/servicesControlller');
+const contactController = require('./controllers/contactController');
 
 
 const userRoutes = require('./routes/userRoutes');
@@ -101,6 +106,20 @@ app.set("view engine","ejs");
 userRoutes.get('/video', (req, res) => {
     res.redirect('/video');
 });
+
+userRoutes.get('/home', (req, res) => {
+    res.redirect('/home');
+});
+userRoutes.get('/about', (req, res) => {
+    res.redirect('/about');
+});
+userRoutes.get('/services', (req, res) => {
+    res.redirect('/services');
+});
+userRoutes.get('/contact', (req, res) => {
+    res.redirect('/contact');
+});
+
 
 
 const PORT = process.env.PORT || 3000;

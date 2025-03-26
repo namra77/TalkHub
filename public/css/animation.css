@@ -1,0 +1,109 @@
+/* Default opacity for elements */
+.hero-heading,
+.banner-content-container,
+.creviews-heading,
+.rtext1,
+.rtext2,
+.aboutSt1,
+.aboutSt2,
+.abt-story-heading,
+.flip-heading,
+.flip-teams,
+.grid,
+.frm-heading,
+#signup_forms,
+#signup_form,
+/* .about-content-title,
+.about-content-text, */
+.contact-content-title,
+.contact-content-text,
+.contact-info,
+.contact-form-image,
+.contact-map-container,
+.pricing-content-title,
+.pricing-content-text,
+.dslider-heading,
+.slider,
+.service-heading,
+.service-grid,
+.service-card,
+.f-heading,
+#signup_form .counter-container,
+.shop-schedule-container,
+.about-image-container,
+.about-content-container .service-card-details,
+.service-card-container,
+.service-content-container,
+.whyBox-content-container,
+.whyBox-video-container,
+.whyBox-achievement-Box,
+.testimonial-card-container,
+.client-image1,
+.client-image2,
+.client-content-title,
+.client-content-text,
+.client-rating-container {
+  opacity: 0;
+}
+
+
+/* Fade in animations */
+.animate__animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+/* Keyframes for fade in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(100);
+  }
+}
+
+/* Custom delay for animation */
+.animate__delay-300ms {
+  animation-delay: 300ms;
+}
+
+
+/* When animated: Visible (opacity: 1) */
+.animate__animated {
+  opacity: 1;
+}
+
+
+/* Duration for .banner-content-container */
+.animate__duration-2s {
+  animation-duration: 30s;
+}
+
+/* Duration for .hero-heading */
+.animate__duration-1_5s {
+  animation-duration: 30s;
+}

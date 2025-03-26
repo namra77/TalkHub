@@ -1,0 +1,473 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor: #fdfd9e;
+  --secondarycolor: #fdfd9e;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #fdfd9e;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  --charcoal: #36454F;
+  --mainheading: #36454F;
+  --jetblack: #36454F;
+  --sectionColor: #252525;
+  --font-family: "Inter", sans-serif;
+  --font-size-h1: 2.5em;
+  --font-size-h2: 2em;
+  --font-size-h3: 1.75em;
+  --font-size-h4: 1.5em;
+  --font-size-h5: 1.25em;
+  --font-size-h6: 1em;
+  --para-size: 1em;
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  max-width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==============================================================================================================*/
+
+/* =============================================== Base Styles ==================================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-family);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 10px;
+  line-height: 1.5;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  letter-spacing: 0px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+img {
+  display: block;
+}
+
+section {
+  height: 100vh;
+  margin: 0px auto;
+  border: 1px solid #6E6E6E;
+}
+
+.container {
+  height: auto;
+}
+
+.list-item ul li {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.list-item ul li span {
+  background-color: var(--secondarycolor);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.list-item ul li span i {
+  color: var(--primarycolor);
+  text-align: center;
+  padding: 5px;
+}
+
+.button-reservation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-reservation-container a {
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: 15.7px;
+  letter-spacing: 1.5px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+}
+
+.button-reservation-container a:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  transform: scale(1.05);
+}
+
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Header CSS is kept in "header.css" */
+
+/* =============================================================================================================*/
+
+
+/* =============================================================================================================*/
+
+/* Hero Section */
+
+.container .main-container .hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.container .main-container .hero-container .hero-image {
+  background: url('../images/service-bg.PNG') no-repeat center/cover;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container .main-container .hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(36, 36, 36, 0.3);
+  z-index: 1;
+}
+
+.container .main-container .hero-container .hero-image .hero-heading {
+  color: var(--primarycolor);
+  font-size: 3.5em;
+  z-index: 2;
+  position: relative;
+}
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Slider Section */
+.container .main-container .deals-slider-container {
+  background-color: var(--sectionColor);
+  height: 100vh;
+  width: 100%;
+}
+
+.container .main-container .deals-slider-container h2,
+.container .main-container .contact-container .forms h2 {
+  color: var(--primarycolor);
+  text-transform: uppercase;
+  margin: 60px 0 40px 0;
+}
+
+.container .main-container .deals-slider-container h2 span,
+.container .main-container .contact-container .forms h2 span {
+  color: var(--secondarycolor);
+}
+
+.container .main-container .deals-slider-container .slider {
+  width: 80%;
+  margin: 50px auto;
+  padding: 10px;
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .deals-slider-container .slider>div {
+  color: var(--mainheading);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Slick slider custom classes */
+
+.slick-slide {
+  text-align: center;
+  margin: 10px;
+}
+
+
+.slick-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Service Cards Section */
+
+.container .main-container .service-container {
+  padding: 20px;
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .service-container h2 {
+  color: var(--primarycolor);
+  margin: 40px 0 40px 0;
+  background-color: var(--secondarycolor);
+}
+
+.container .main-container .service-container h2 span {
+  color: var(--sectionColor);
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image .overlay h3 {
+  letter-spacing: 5px;
+}
+
+
+.container .main-container .service-container .service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.container .main-container .service-container .service-grid .service-card {
+  width: 300px;
+  height: 370px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s, brightness 0.3s;
+}
+
+.container .main-container .service-container .service-grid .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image img {
+  width: 100%;
+  height: 400px;
+  max-height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image .overlay p {
+  margin: 5px 0;
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image .overlay .book-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--secondarycolor);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .main-container .service-container .service-grid .service-card .card-image .overlay .book-btn:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================================================================================*/
+
+/* =============================================================================================================*/
+
+/* Form Section */
+
+
+.container .main-container .contact-container .forms {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--sectionColor);
+}
+
+.container .main-container .contact-container .forms form {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+
+.container .main-container .contact-container .forms .form-group>input[type="text"],
+.container .main-container .contact-container .forms .form-group>input[type="password"],
+.container .main-container .contact-container .forms .form-group>input[type="date"],
+.container .main-container .contact-container .forms .form-group>input[type="datetime"],
+.container .main-container .contact-container .forms .form-group>input[type="email"],
+.container .main-container .contact-container .forms .form-group>input[type="number"],
+.container .main-container .contact-container .forms .form-group>input[type="search"],
+.container .main-container .contact-container .forms .form-group>input[type="tel"],
+.container .main-container .contact-container .forms .form-group>input[type="time"],
+.container .main-container .contact-container .forms .form-group>input[type="url"],
+.container .main-container .contact-container .forms .form-group>textarea,
+.container .main-container .contact-container .forms .form-group>select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--tertiarycolor);
+  font-size: 16px;
+  height: auto;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 10px;
+}
+
+.container .main-container .contact-container .forms .form-group>input[type="radio"],
+.container .main-container .contact-container .forms .form-group>input[type="checkbox"] {
+  margin: 20 4px 8px 0;
+}
+
+.container .main-container .contact-container .forms .form-group>input[type="radio"],
+.container .main-container .contact-container .forms .form-group>input[type="checkbox"] {
+  margin: 15px 0 25px 0;
+}
+
+.container .main-container .contact-container .forms .form-group>label {
+  display: none;
+}
+
+.container .main-container .contact-container .forms button {
+  padding: 19px 39px 18px 39px;
+  color: var(--primarycolor);
+  background-color: var(--secondarycolor);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+}
+
+.container .main-container .contact-container .forms button:hover {
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
+  transform: scale(1);
+}
+
+/* =============================================================================================================*/
+
+/* Custom styles for SweetAlert */
+.custom-swal {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  position: relative;
+  z-index: 100;
+}
+
+.custom-swal .swal2-confirm {
+  background-color: var(--sectionColor);
+  color: var(--primarycolor);
+}
+
+.error {
+  color: red !important;
+}
+
+.error-border {
+  border: 2px solid red !important;
+}
+
+.success-border {
+  border: 4px solid green !important;
+}
+
+/* =============================================================================================================*/
+
+/* Footer CSS is kept in "header.css" */
+
+/* =============================================================================================================*/

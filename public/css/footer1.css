@@ -1,0 +1,173 @@
+/* ========================================Importing Fonts===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================================================================================================- */
+
+/*============================================= Variables======================================================= */
+:root {
+  --primarycolor: #FFFFFF;
+  --secondarycolor: #412a35;;
+  --tertiarycolor: #6E6E6E;
+  --quaternarycolor: #412a35;;
+  --neutralgrey: (lightgrey);
+  --backgroundcolor: rgba(255, 255, 255, 0.4);
+  --transparentcolor: transparent;
+  /* --jetblack: #121212; */
+  --footercolor: #412a35;;
+  --jetblack: #36454F;
+  --charcoal: #36454F;
+  --font-family: "Inter", sans-serif;
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: auto;
+}
+
+/* ==============================================================================================================*/
+
+/* =============================================== Base Styles ==================================================*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+section {
+  height: auto;
+}
+
+.hero-section {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+/* ==============================================================================================================*/
+
+/* Footer */
+
+.container .footer-container {
+  background-color: var(--footercolor);
+  color: var(--primarycolor);
+  padding: 100px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.container .footer-container .footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 70px;
+  place-items: center;
+}
+
+.container .footer-container .footer-main .footer-content-container .footer-logo h2 {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  color: #fdfd9e;
+}
+
+.container .footer-container .footer-main .footer-content-container .footer-text p,
+.container .footer-container .footer-main .footer-company-details  p,
+.container .footer-container .footer-main .footer-company-details .contact-info p > a {
+  font-family: var(--font-family);
+  font-size: 17px;
+  color: var(--primarycolor);
+  line-height: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.container .footer-container .footer-main .footer-content-container .footer-input-email input {
+  padding: 10px;
+  width: 95%;
+  border: 2px solid var(--secondarycolor);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.container .footer-container  .footer-main .footer-content-container form .footer-input-email input:focus {
+  border-color: var(--primarycolor);
+  outline: none;
+}
+
+.container .footer-main .footer-content-container .footer-subscribe-button input {
+  padding: 8px 10px;
+  width: 30%;
+  background-color: var(--secondarycolor);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  margin-top: 10px;
+}
+
+.container .footer-main .footer-content-container .footer-subscribe-button input:hover {
+  background-color: var(--primarycolor);
+}
+
+.container .footer-main .footer-content-container .footer-subscribe-button input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.container .footer-main .footer-content-container .footer-input-email input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.container .footer-container .footer-main .footer-quick-links h2,
+.container .footer-container .footer-main .footer-company-details h3 {
+  font-family: var(--font-family);
+  font-size: 35px;
+  color: #fdfd9e;
+  line-height: 43px;
+  margin-bottom: 10px;
+  text-shadow: none;
+  letter-spacing: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.container .footer-container  .footer-main .footer-quick-links ul li span i {
+  color: #fdfd9e ;
+}
+
+.container .footer-container  .footer-main .footer-quick-links ul li a {
+  color: var(--primarycolor);
+  margin: 10px;
+}
+
+.container .footer-container  .footer-main .footer-company-details .contact-info p span i {
+  color: #fdfd9e;
+}
+
+
+
+
+
+
+
+
+

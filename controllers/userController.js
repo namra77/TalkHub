@@ -50,48 +50,50 @@ const register = async (req, res) => {
 };
 
 //Render the login page
-const loadLogin = async (req, res) => {
+const loadLogin = (req, res) => {
   try {
-   await  res.render("login");
-  
+    const message = req.session.message || "";
+    req.session.message = "";
+    res.render("login", { message });
+
   } catch (error) {
-    console.log(error.message);
+    res.render("login", { error });
   }
 };
 
 //Handle user login
 const login = async (req, res) => {
   try {
-    // res.render('login');
     const email = req.body.email;
     const password = req.body.password;
 
-    //Find user by email
+    // Find user by email
     const userData = await User.findOne({ email: email });
 
     if (userData) {
-      //Compare passwords
+      // Compare passwords
       const passwordMatch = await bcrypt.compare(password, userData.password);
       if (passwordMatch) {
-        //Set session and redirect to the dashboard
+        // Set session and redirect to the dashboard
         req.session.user = userData;
         res.cookie(`user`, JSON.stringify(userData));
-        res.redirect("/dashboard");
-        return;
+        return res.redirect("/dashboard");
       } else {
-        // Error incorrect password
-       await  res.render("login", { message: "Email and Password is incorrect" });
-      
+        // Error: incorrect password
+        return res.render("login", { message: "Incorrect password!" });
       }
     } else {
-      //No user found
-   await  res.render("login", { message: "Email and Password is incorrect" });
-    
+      // Error: no user found
+      return res.render("login", { message: "User not found!" });
     }
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
+    return res.render("login", { message: "An error occurred. Please try again." });
   }
 };
+
+
+
 
 //Handle user logout route
 const logout = async (req, res) => {
@@ -109,8 +111,8 @@ const logout = async (req, res) => {
 const loadDashboard = async (req, res) => {
   try {
     var users = await User.find({ _id: { $nin: [req.session.user._id] } });
-   await res.render('dashboard', { user: req.session.user, users: users }); //added here sigle colon instead of double
-  
+    await res.render('dashboard', { user: req.session.user, users: users }); //added here sigle colon instead of double
+
   } catch (error) {
     console.log(error.message);
   }
@@ -141,7 +143,7 @@ const deleteChat = async (req, res) => {
 
     res.status(200).send({ success: true });
 
-  } catch(error) {
+  } catch (error) {
     res.status(400).send({ success: false, msg: error.message });
   }
 };
@@ -156,7 +158,7 @@ const updateChat = async (req, res) => {
 
     res.status(200).send({ success: true });
 
-  } catch (error){
+  } catch (error) {
     res.status(400).send({ success: false, msg: error.message });
   }
 };
@@ -164,8 +166,8 @@ const updateChat = async (req, res) => {
 const loadGroups = async (req, res) => {
   try {
     const groups = await Group.find({ creator_id: req.session.user._id, });
-   await res.render('group', { groups: groups });
-  
+    await res.render('group', { groups: groups });
+
   } catch (error) {
     console.log(error.message);
   }
@@ -184,8 +186,8 @@ const createGroup = async (req, res) => {
 
     const groups = await Group.find({ creator_id: req.session.user._id, });
 
-   await res.render('group', { message: req.body.name + 'Group created successfully!', groups: groups });
-  
+    await res.render('group', { message: req.body.name + 'Group created successfully!', groups: groups });
+
   } catch (error) {
     console.log(error.message);
   }
@@ -310,12 +312,12 @@ const shareGroup = async (req, res) => {
   try {
     var groupData = await Group.findOne({ _id: req.params.id })
     if (!groupData) {
-     return  res.render('error', { message: '404 not found' })
+      return res.render('error', { message: '404 not found' })
 
     }
     else if (req.session.user == undefined) {
 
-     return  res.render('error', { message: 'you need to access the share URL' })
+      return res.render('error', { message: 'you need to access the share URL' })
 
 
     } else {

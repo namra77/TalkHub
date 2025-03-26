@@ -9,6 +9,10 @@ const user_route = express();
 
 // Import your controller
 const videoController = require('../controllers/videoController');
+const homeController = require('../controllers/homeController');
+const aboutController = require('../controllers/aboutController');
+const servicesController= require('../controllers/servicesControlller');
+const contactController = require('../controllers/contactController');
 
 
 //Controllers and Middlewares
@@ -92,6 +96,10 @@ user_route.post('/update-group-chat', userController.updateGroupChat)
 
 // Define the route
 user_route.get('/video', videoController.getVideoPage);
+user_route.get('/home', homeController.getHomePage);
+user_route.get('/about', aboutController.getAboutPage);
+user_route.get('/services', servicesController.getServicesPage);
+user_route.get('/contact', contactController.getContactPage);
 
 //Catch all route rediretcted to home page
 user_route.get('*', function (req, res) {

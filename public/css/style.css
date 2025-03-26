@@ -2913,14 +2913,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #81137c;
+  border-color: #18385a;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: purple;
+  /* border-color: #0062cc; */
 }
 
 .btn-primary:focus,
@@ -2942,7 +2942,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #0062cc;
   border-color: #005cbf;
-}
+} 
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -6183,7 +6183,7 @@ a.badge-dark.focus {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -6485,8 +6485,8 @@ a.badge-dark.focus {
 
 .list-group-item-dark {
   color: #1b1e21;
-  background-color: #c6c8ca;
-}
+  background-color: beige;
+} 
 
 .list-group-item-dark.list-group-item-action:hover,
 .list-group-item-dark.list-group-item-action:focus {
@@ -11798,7 +11798,8 @@ h5,
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #212121;
+  /* background: #212121; */
+  background: #412a35;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -11819,16 +11820,16 @@ h5,
 }
 
 #sidebar h1 {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-weight: 700;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 #sidebar h1 .logo {
   color: #fff;
   display: block;
-  padding: 10px 30px;
-  background: #2f89fc;
+  padding: 25px 30px;
+  background: purple;
 }
 
 #sidebar ul.components {
@@ -11836,7 +11837,7 @@ h5,
 }
 
 #sidebar ul li {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #sidebar ul li>ul {
@@ -11849,14 +11850,15 @@ h5,
 
 #sidebar ul li a {
   padding: 15px 30px;
+  font-weight: bold;
   display: block;
   color: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #sidebar ul li a:hover {
-  color: #fff;
-  background: #2f89fc;
+  color: #412a35;
+  background: #fdfd9e !important;
   border-bottom: 1px solid #2f89fc;
 }
 
@@ -11866,7 +11868,8 @@ h5,
 }
 
 #sidebar ul li.active>a:hover {
-  background: #2f89fc;
+  color: #412a35;
+  background: #fdfd9e;
   border-bottom: 1px solid #2f89fc;
 }
 
@@ -11947,7 +11950,8 @@ a[data-toggle="collapse"] {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  background: radial-gradient(circle at top left, #c3eaff, #e5ccff);
+  /* background: radial-gradient(circle at top left, #c3eaff, #e5ccff); */
+  background: #b7a1a1;
 }
 
 .btn.btn-primary {
@@ -12017,14 +12021,14 @@ a[data-toggle="collapse"] {
 background-repeat: no-repeat;
 background-size: 650px 800px;
  object-fit: cover; */
- background: linear-gradient(135deg, #e3ecff, #e9d4f2);
+ background: #fdfd9e !important;
  width: 100%;
   height: 470px;
   overflow: scroll;
   padding: 5px;
 }
 #group-chat-container{
-  background: linear-gradient(135deg, #e3ecff, #e9d4f2);
+  background: #fdfd9e !important;
  width: 100%;
   height: 470px;
   overflow: scroll;
@@ -12032,9 +12036,9 @@ background-size: 650px 800px;
 }
 
 .border {
-  width: 77%;
-    margin-top: 7px;
-    padding: 5px;
+  width: 79%;
+    margin-top: 20px;
+    padding: 8px;
 }
 
 .chat-section {
@@ -12073,6 +12077,10 @@ background-size: 650px 800px;
   width: 100%;
 }
 
+.form-container > .register{
+  padding-top: 20px;
+}
+
 
 #add-member-error{
   color: red;
@@ -12080,22 +12088,46 @@ background-size: 650px 800px;
 .section{
   height: 100vh;
   align-items: center;
-background: radial-gradient(circle at top left, #c3eaff, #e5ccff);
+font-family: var(--main-font) !important;
 }
-.form-container {
-  /* background: white; */
+.form-container-1 {
+  font-family: var(--main-font);
+  color: #412a35;
   background: rgba(255, 255, 255, 0.05); 
   backdrop-filter: blur(8px);            
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 55vw;
   height: 90vh;
-  padding: 100px;
+  padding: 15px 100px 100px 100px;
   align-items: center;
-  margin-right: 100px;
+  margin-right:  100px;
+}
+.form-container-1 a {
+   color: white; 
+}
+.form-container-1 .login{
+ margin-top: 15px;
+}
+.form-container {
+ font-family: var(--main-font);
+  color: #412a35;
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(8px);            
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 55vw;
+  height: 90vh;
+  padding: 70px 100px 100px 100px;
+  align-items: center;
+  margin-right:  100px;
+}
+.form-container a {
+  color: white;
 }
 .fade-in {
   opacity: 0;
@@ -12109,13 +12141,6 @@ background: radial-gradient(circle at top left, #c3eaff, #e5ccff);
     transform: translateY(0);
   }
 }
-.form{
-  /* width: 50vw;
-  height: 90vh;
-  padding: 100px;
-  align-items: center;
-  margin-right: 100px; */
-}
 .form input {
  
   padding: 6px;
@@ -12124,23 +12149,27 @@ background: radial-gradient(circle at top left, #c3eaff, #e5ccff);
 }
 
 .form-2 h1 {
+  color: #412a35;
   margin-left: -3px;
   padding-top: 10px;
   padding-bottom: 5px;
   margin-bottom: 0.5rem;
 }
 .form-2 > h2{
+  color: #412a35;
 padding-top: 10px;
 padding-bottom: 5px;
 margin-bottom: 1rem;
 }
 .form-2 .btn-form {
+  background-color: #412a35;
   padding: 12px 28px 10px 28px;
   transition: all 0.3s ease;
 }
 .btn-form:hover{
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
   transform: scale(1.05);
+  background-color: purple;
 }
 .form-2 input {
   padding: 6px;
@@ -12148,17 +12177,20 @@ margin-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.6);
 }
 .form h1 {
+  color: #412a35;
   margin-left: -3px;
   padding-top: 10px;
   padding-bottom: 5px;
   margin-bottom: 0.5rem;
 }
 .form > h2{
+  color: #412a35;
 padding-top: 10px;
 padding-bottom: 5px;
 margin-bottom: 1rem;
 }
 .form .btn-form {
+  background-color: #412a35;
   padding: 12px 28px 10px 28px;
 }
 .box{
@@ -12176,13 +12208,10 @@ border-radius: 10px;
 .floating {
   animation: float 3s ease-in-out infinite;
 }
-/* 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-} */
 
+.error{
+  color: red;
+}
 .box > h4{
   margin-top: 70px;
   color: white;
@@ -12237,7 +12266,7 @@ button:hover {
 .message {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 6px 15px;
+  padding: 1px 15px;
   margin: 8px;
   max-width: 70%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -12276,5 +12305,65 @@ width:25px;
 height: 25px;
 border-radius: 100px;
 border: 1px solid red;
+
+}
+
+.list-group-item-dark {
+  color: #1b1e21 !important;
+  background-color: #fdfd9e !important;
+}
+
+.dash-text,.dash-name{
+  font-size: 3rem !important;
+  color: #412a35;
+  font-weight: bolder;
+  margin: 20px;
+  /* text-align: center; */
+}
+.text-shadow-drop-center{-webkit-animation:text-shadow-drop-center 20s both;animation:text-shadow-drop-center 20s both}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-3-25 14:46:6
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ @-webkit-keyframes text-shadow-drop-center{0%{text-shadow:0 0 0 transparent}100%{text-shadow:0 0 18px rgba(0,0,0,.35)}}@keyframes text-shadow-drop-center{0%{text-shadow:0 0 0 transparent}100%{text-shadow:0 0 18px rgba(0,0,0,.35)}}
+
+
+ .text-focus-in{-webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
+
+
+ /* ----------------------------------------------
+ * Generated by Animista on 2025-3-25 14:47:58
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+
+
+.my-btn {
+  color: #fff;
+  background-color: #412a35;
+  border-color: #412a35;
+  padding: 6px;
+}
+
+.my-btn:hover {
+  color: #412a35;
+  background-color: #fdfd9e;
+  /* border-color: #0062cc; */
+}
+
+.name-bar{
+  border:1px solid black;
+ background-color: #fdfd9e !important;
+ padding: 5px;
+ color:#412a35;
+
 
 }
