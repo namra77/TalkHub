@@ -4,9 +4,8 @@ const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.URI)
-.then(()=>console.log("Connected to Mongodb sucessfully"))
-.catch((err)=>console.log("Error connected to Mongodb",err));
-
+.then(() => console.log("Connected to Mongodb successfully"))
+.catch(err => console.error("Error connecting to Mongodb:", err));
 
 const app = require('express')();
 
